@@ -1,0 +1,14 @@
+[
+  {"query": "Connect MongoDB Compass to my remote database over an SSH tunnel.", "should_trigger": true},
+  {"query": "Compass keeps forgetting my MongoDB password every time I close it on Wayland.", "should_trigger": true},
+  {"query": "My Compass connection to the tunneled MongoDB fails silently and never loads.", "should_trigger": true},
+  {"query": "A MongoDB connection I saved in Compass disappeared — why?", "should_trigger": true},
+  {"query": "How do I stop Compass from doing replica-set discovery and failing on internal hostnames?", "should_trigger": true},
+  {"query": "I get ECONNREFUSED connecting Compass through my SSH tunnel.", "should_trigger": true},
+  {"query": "Compass says it connected but no data loads through the tunnel.", "should_trigger": true},
+  {"query": "Write a MongoDB aggregation pipeline to group orders by month.", "should_trigger": false},
+  {"query": "Install and configure a MongoDB server on my VPS.", "should_trigger": false},
+  {"query": "Connect to my PostgreSQL database with DBeaver.", "should_trigger": false},
+  {"query": "Build an eww widget for my status bar.", "should_trigger": false},
+  {"query": "Create a Meta Ads campaign for my client.", "should_trigger": false}
+]
