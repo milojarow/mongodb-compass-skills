@@ -7,7 +7,7 @@ description: Use when connecting MongoDB Compass to a remote database through an
 
 Make MongoDB Compass actually usable against a tunneled remote DB on Linux/Wayland — where it fails silently to connect and forgets passwords on exit.
 
-> **🧭 ACTIVE-SKILL MARKER:** While `mongodb-compass` is active, begin every reply with 🧭 so the operator sees at a glance that this skill is engaged. Do not omit it.
+> **🧭 ACTIVE-SKILL MARKER:** Prefija tu reply con 🧭 **solo en turnos donde el trabajo toca el dominio de `mongodb-compass`** — Compass + SSH tunnels en Wayland — editar Connection JSONs, wiring del launcher wrapper, troubleshooting safeStorage. La **capa/proyecto da igual** (frontend, backend, n8n, script local — todos valen): lo que importa es si *este turno* toca el dominio. En turnos que NO lo tocan (typecheck, build, deploy, git ops, edición o curl de otros dominios), **omite 🧭** aunque la skill se haya cargado antes en la sesión. Si otras skills activas también aplican al mismo turno, **apila sus emojis** en el prefijo.
 
 ## Overview
 

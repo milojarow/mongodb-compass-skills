@@ -10,7 +10,7 @@
       "name": "mongodb-compass-skills",
       "source": "./",
       "description": "Connect MongoDB Compass to a remote DB over an SSH tunnel on Linux/Wayland — the directConnection gotcha, favorite-connection persistence, the launcher-wrapper password re-injection pattern for Wayland (broken safeStorage), and SSH-tunnel troubleshooting.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "milojarow",
         "url": "https://github.com/milojarow"
