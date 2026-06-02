@@ -1,0 +1,21 @@
+{
+  "id": "mongodb-compass-004",
+  "skills": ["mongodb-compass"],
+  "query": "I set up a tunneled MongoDB connection in Compass a few weeks ago and now it's just gone from the list — I have to recreate it from scratch. Is Compass deleting my connections? How do I keep it from disappearing?",
+  "expected_behavior": [
+    "Activates the mongodb-compass skill",
+    "Routes to reference/connection-and-tunnels.md",
+    "Explains Compass periodically cleans up connections saved as \"recent\"",
+    "Tells the user to set savedConnectionType to \"favorite\" in the connection JSON so it sticks",
+    "Notes that if one already vanished, recreate it then set it to favorite"
+  ],
+  "expected_content": [
+    "savedConnectionType",
+    "favorite",
+    "recent",
+    "cleans up",
+    "connection-and-tunnels.md"
+  ],
+  "priority": "medium",
+  "notes": "Guards against the assumption that Compass is buggy or that the disappearance is unfixable. The documented cause is that 'recent' connections get periodically purged; the fix is marking the connection as 'favorite' in the JSON."
+}

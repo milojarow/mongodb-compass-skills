@@ -1,0 +1,25 @@
+{
+  "id": "mongodb-compass-003",
+  "skills": ["mongodb-compass"],
+  "query": "Weird one: `nc -zv 127.0.0.1 27018` reports the port is open and succeeds, so I assumed the tunnel is healthy, but Compass connects and then just hangs with no data coming back. If the port is open, why isn't it working?",
+  "expected_behavior": [
+    "Activates the mongodb-compass skill",
+    "Routes to reference/connection-and-tunnels.md",
+    "Explains that nc success only proves TCP is open, NOT that MongoDB is answering",
+    "Identifies the likely cause: a zombie SSH session — the local port stays forwarded but the far end is dead",
+    "Recommends testing at the MongoDB wire-protocol level instead, e.g. mongosh ... --eval 'db.runCommand({ping:1})'",
+    "Recommends killing and re-establishing the tunnel (pkill -f \"ssh.*-L <port>\")"
+  ],
+  "expected_content": [
+    "nc",
+    "TCP",
+    "zombie",
+    "wire protocol",
+    "mongosh",
+    "ping",
+    "pkill -f",
+    "connection-and-tunnels.md"
+  ],
+  "priority": "high",
+  "notes": "Guards against the trap of trusting `nc` as proof the connection works. The skill is explicit: nc success != MongoDB responding. A zombie SSH session leaves the port open while nothing answers; verification must happen at the protocol level, and the fix is re-establishing the tunnel."
+}

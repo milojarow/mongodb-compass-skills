@@ -1,0 +1,22 @@
+{
+  "id": "mongodb-compass-001",
+  "skills": ["mongodb-compass"],
+  "query": "I set up an SSH tunnel to my remote MongoDB on localhost:27018 and put the connection string into Compass, but it just spins and never connects — no error message, nothing. The tunnel itself seems fine. What's wrong?",
+  "expected_behavior": [
+    "Activates the mongodb-compass skill",
+    "Routes to reference/connection-and-tunnels.md",
+    "Identifies the missing directConnection=true as the cause: Compass does replica-set discovery, reads the members' internal hostnames, and tries to reach hosts that don't resolve on the local machine",
+    "Explains the failure is silent (no clear error), not a tunnel problem",
+    "Gives the corrected connection string with directConnection=true and authSource=admin"
+  ],
+  "expected_content": [
+    "directConnection=true",
+    "replica-set discovery",
+    "internal hostnames",
+    "silent",
+    "mongodb://USER:PASS@localhost:PORT/DB?authSource=admin&directConnection=true",
+    "connection-and-tunnels.md"
+  ],
+  "priority": "high",
+  "notes": "Guards against the #1 wall: a naive answer blames the tunnel and tells the user to debug SSH, when the real cause is Compass attempting replica-set discovery against unresolvable internal hosts. directConnection=true is the fix and the failure is silent, so there is no error to point at."
+}
